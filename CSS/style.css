@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Quicksand:wght@300&display=swap');
+
+
+.explorekerala{
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+    text-shadow: rgb(159, 223, 163) ;
+   
+
+}
+
+.carousel-inner img {
+width: 100%;
+height: 100%;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+.fa:hover {
+      opacity: 0.7;
+  }
+  
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.homeHead{
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 10px rgb(195, 224, 196);
+}
+.homeHead2{
+    text-align: center;
+    text-shadow: 1px 1px 10px rgb(195, 224, 196);
+}
+.places{
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgb(195, 224, 196);
+}
+
+.distName{
+    top: 5px;
+    font-family: 'Poiret One', cursive;
+    /* font-family: 'Quicksand', sans-serif; */
+    text-align: center;
+    font-weight: bold;
+}
+
+.distDetails{
+    color: rgb(31, 32, 31);
+    padding: 20px;
+    text-align: center;
+    
+
+}
+
+.jumbortonn{
+    
+    font-family: 'Poiret One', cursive; 
+    background: rgb(195, 224, 196);
+    font-weight: bolder;
+
+}
+.cardPadding{
+    padding: 40px;
+}
+
+.card-img-top {
+    width: 70%;
+    height: 30vw;
+    object-fit: cover;
+}
+
+.card-img {
+    width: 70%;
+    height: 30vw;
+    object-fit: cover;
+}
+.galleryCard{
+    padding: 14px;
+}
