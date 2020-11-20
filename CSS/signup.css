@@ -12,7 +12,7 @@
 .bg{
     background: url(../Pictures/bg2.jpg) no-repeat ;
     width:100%;
-    height: 100vh;
+    height: 150vh;
     
     
 }
@@ -21,3 +21,39 @@
 .myText{
     text-align: center;
 }
+.ml11 {
+    font-weight: lighter;
+    text-align: center;
+    font-size: 40px;
+    
+    color:rgb(68, 66, 66);
+    background-color: rgb(216, 211, 211);
+ }
+  
+  .ml11 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  }
+  
+  .ml11 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #fff;
+    transform-origin: 0 50%;
+  }
+  
+  .ml11 .line1 { 
+    top: 0; 
+    left: 0;
+  }
+  
+  .ml11 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }

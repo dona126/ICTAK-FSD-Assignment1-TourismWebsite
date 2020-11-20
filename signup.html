@@ -12,26 +12,66 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <ul class="navbar-nav ">
+        <a class="navbar-brand" href="#">
+          <img src="Pictures/icon.png" width="60" height="40" alt="" loading="lazy">
+        </a>
+      </ul>
+      <div class="navbar-nav ml-auto">
+        <a class="nav-link" href="index.html">HOME</a>
+      </div>
+    </div>
+  </nav>
+  <h1 class="ml11">
+    <span class="text-wrapper">
+      <span class="line line1"></span>
+      <span class="letters">Sign Up to explore all the districts</span>
+    </span>
+  </h1>
+
+
+
+
   <div class="container-fluid bg">
     <div class="row justify-content-center">
-      <div class="col-12 col-sm-6 col-md-3">
+      <div class="col-10 col-sm-6 col-md-5">
 
 
-        <form class="formClass">
+        <form class="formClass" action="login.html"  onsubmit=" return usernameValidation();">
           <div class="form-group">
-              <input type="text" class="form-control" placeholder="Username">
+              <input type="text" class="form-control" id="username" placeholder="Username">
+              <label  id="error1"></label>
           </div>
           <div class="form-group">
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address">
+            <input type="contact number"  class="form-control" id="number" placeholder="Contact number">
+            <label  id="error2"></label>
+         </div>
+          <div class="form-group">
+            <input type="email"  class="form-control"  id="email" aria-describedby="emailHelp" placeholder="Email address">
+            <label  id="error3"></label>
           </div>
           <div class="form-group">
-             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+             <input type="password"  class="form-control" id="pwd" placeholder="Password">
+             <label  id="error4"></label>
+             <!-- <span id="strength">Type Password</span> -->
           </div>
+          <div class="form-group">
+            <input type="password"  class="form-control" id="pwd2" placeholder="Confirm Password">
+            <label  id="error5"></label>
+            <!-- <span id="strength">Type Password</span> -->
+         </div>
           <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">By clicking Sign Up, you agree to our Terms of Service and Privacy Policy</label>
+            <label class="form-check-label" for="exampleCheck1">By clicking Sign Up, you agree to our Terms of Service.</label>
           </div>
           <button type="submit" class="btn btn-secondary btn-block">Sign Up</button>
 
@@ -45,10 +85,160 @@
       </div>
     </div>
   </div>
+  <h1></h1>
+  
   <footer class="page-footer font-small blue">
+  
     <div class="footer-copyright text-center py-3">© 2020 Copyright:
       <a href="index.html">Kerala Tourism Department </a>
     </div>
   </footer>
+  <script src="JSS/signup.js">
+  </script>
+  <script>
+
+    let username=document.getElementById("username");
+    let number=document.getElementById("number");
+    let email=document.getElementById("email");
+    let pwd=document.getElementById("pwd");
+    let pwd2=document.getElementById("pwd2");
+    
+    let error1=document.getElementById("error1");
+    let error2=document.getElementById("error2");
+    let error3=document.getElementById("error3");
+    let error4=document.getElementById("error4");
+    let flag=0;
+
+    let regexpname= /^([A-Za-z0-9\._]+)$/;
+    let regexpnum1= /^([0-9]{3})([0-9]{3})([0-9]{3})$/;
+    let regexpnum2= /^([0-9]{3}) ([0-9]{3}) ([0-9]{3})$/;
+    let regexpnum3= /^([0-9]{3}).([0-9]{3}).([0-9]{3})$/;
+    let regexpnum4= /^([0-9]{3})-([0-9]{3})-([0-9]{3})$/;
+  
+    let regexpemail= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+    let regexppwd= /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    // + one or more
+    
+    
+    function usernameValidation()
+    {
+      
+      if(regexpname.test(username.value) )
+      {
+        error1.innerHTML="Valid username.";
+        error1.style.color="green";
+        return numValidation();
+        
+      }
+     else{
+    
+        error1.innerHTML="Username can including A-Z , a-z , 0-9 , _ , and . only!";
+        error1.style.color="red";
+        return false;
+    
+         } 
+      
+    }
+  
+    function numValidation()
+    {
+      
+      if((regexpnum1.test(number.value) || regexpnum2.test(number.value) || regexpnum3.test(number.value) || regexpnum4.test(number.value))  )
+      {
+        error2.innerHTML="Valid contact number";
+        error2.style.color="green";
+        return mailValidation();
+        
+      }
+     else{
+    
+        error2.innerHTML="Accepted formats are: XXXXXXXXXX, XXX-XXX-XXXX, XXX.XXX.XXXX, XXX XXX XXXX";
+        error2.style.color="red";
+        return false;
+    
+         } 
+      
+    }
+    function mailValidation()
+    {
+      
+      if(regexpemail.test(email.value) )
+      {
+        error3.innerHTML="Valid Email address.";
+        error3.style.color="green";
+        return passwordValidation();
+        
+      }
+     else{
+    
+        error3.innerHTML="Invalid Email address.";
+        error3.style.color="red";
+        return false;
+    
+         } 
+      
+    }
+    function passwordValidation()
+    {
+    
+      if(regexppwd.test(pwd.value))
+      {
+        error4.innerHTML="Password format accepted!";
+        error4.style.color="green";
+        return password2Validation();
+      }
+     else{
+    
+        error4.innerHTML="Password format accepted: Minimum 8 characters, at least one uppercase, and one lower case, must contain at least one number.";
+        error4.style.color="red";
+        return false;
+    
+         } 
+      
+    }
+    function password2Validation(){
+      if (enoughRegex.test(pwd.value)) 
+          {
+            error4.innerHTML="Weak password!";
+            error4.style.color="red";
+            return password3Validation();
+            
+          }
+
+        else if (mediumRegex.test(pwd.value)) 
+          {
+            error4.innerHTML="Medium password!";
+            error4.style.color="orange";
+            return false;
+            
+          }
+        else
+          {
+            error4.innerHTML="Strong password!";
+            error4.style.color="green";
+            return false;
+            
+          }
+        
+ 
+      }
+
+    function password3Validation(){
+      if(pwd2.value==pwd.value )
+      {
+        error5.innerHTML="Password confirmed.";
+        error5.style.color="green";
+        return true;
+      }
+     else{
+        error5.innerHTML="Invalid confirmation. Please enter the password entered above.";
+        error5.style.color="red";
+        return false;
+    
+         } 
+      
+    } 
+  </script>
+ 
 </body>
 </html>

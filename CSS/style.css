@@ -38,11 +38,7 @@ height: 100%;
     background: #55ACEE;
     color: white;
   }
-  
-.fa-linkedin {
-    background: #007bb5;
-    color: white;
-  }
+
   
 .fa-youtube {
     background: #bb0000;
@@ -110,3 +106,10 @@ height: 100%;
 .galleryCard{
     padding: 14px;
 }
+
+#distt{
+    
+        max-width: 100%;
+        height: auto;
+        
+} 
