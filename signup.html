@@ -119,7 +119,11 @@
     let regexppwd= /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
     // + one or more
     
-    
+    let regexpStrong = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{12,}$/;
+    let regexpMedium = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{10,}$/;
+    let regexpEnough = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+
+
     function usernameValidation()
     {
       
@@ -132,7 +136,7 @@
       }
      else{
     
-        error1.innerHTML="Username can including A-Z , a-z , 0-9 , _ , and . only!";
+        error1.innerHTML="Username can include A-Z , a-z , 0-9 , _ , and . only!";
         error1.style.color="red";
         return false;
     
@@ -197,31 +201,32 @@
       
     }
     function password2Validation(){
-      if (enoughRegex.test(pwd.value)) 
+      if (regexpStrong.test(pwd.value)) 
+          {
+            error4.innerHTML="Strong password!";
+            error4.style.color="green";
+            return password3Validation();
+            
+          }
+
+        else if (regexpMedium.test(pwd.value)) 
+          {
+            error4.innerHTML="Medium strength password!";
+            error4.style.color="orange";
+            return password3Validation();
+            
+            
+          }
+        else
           {
             error4.innerHTML="Weak password!";
             error4.style.color="red";
             return password3Validation();
             
-          }
-
-        else if (mediumRegex.test(pwd.value)) 
-          {
-            error4.innerHTML="Medium password!";
-            error4.style.color="orange";
-            return false;
             
           }
-        else
-          {
-            error4.innerHTML="Strong password!";
-            error4.style.color="green";
-            return false;
-            
-          }
-        
+   }
  
-      }
 
     function password3Validation(){
       if(pwd2.value==pwd.value )

@@ -30,3 +30,4 @@ anime.timeline({loop: true})
     delay: 1000
   });
 
+
