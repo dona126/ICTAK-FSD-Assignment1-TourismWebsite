@@ -12,7 +12,7 @@
 .bg{
     background: url(../Pictures/bg2.jpg) no-repeat ;
     width:100%;
-    height: 150vh;
+    height: 140vh;
     
     
 }
@@ -23,10 +23,12 @@
 }
 
 
+
+
 .ml11 {
     font-weight: lighter;
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     
     color:rgb(68, 66, 66);
     background-color: rgb(216, 211, 211);

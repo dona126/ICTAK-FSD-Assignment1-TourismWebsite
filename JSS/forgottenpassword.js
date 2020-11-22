@@ -37,7 +37,7 @@ function email2Validation(){
     }
    else{
   
-      error2.innerHTML="Invalid confirmation. Please enter the Email entered above.";
+      error2.innerHTML="Invalid confirmation, please enter the Email entered above.";
       error2.style.color="red";
       return false;
   
