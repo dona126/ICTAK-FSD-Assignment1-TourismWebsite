@@ -1,20 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Quicksand:wght@300&display=swap');
 
+.parallax {
+    background-image: url(../Pictures/parallax.jpg );
+    
+  
+    height: 100%; 
+  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.parallax2{
+    background-image: url(../Pictures/parallax2.jpg );
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
 
 .explorekerala{
     text-align: center;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    font-size: 45px;
+    /* font-family: 'Poiret One', cursive; */
+    font-weight: bolder;
+    font-size: 50px;
     text-shadow: rgb(159, 223, 163) ;
+    color:black;
    
 
 }
 
-.carousel-inner img {
-width: 100%;
-height: 100%;
+.marginn{
+    
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
+
 
 .fa {
     padding: 20px;
@@ -68,6 +95,7 @@ height: 100%;
 .distName{
     top: 5px;
     font-family: 'Poiret One', cursive;
+    text-transform: uppercase;
     /* font-family: 'Quicksand', sans-serif; */
     text-align: center;
     font-weight: bold;
@@ -76,18 +104,27 @@ height: 100%;
 .distDetails{
     color: rgb(31, 32, 31);
     padding: 20px;
-    text-align: center;
+    text-align: left;
     
 
 }
+.jumbortonnn{
+    opacity: 80%;
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+    text-decoration: black;
 
+}
 .jumbortonn{
     
-    font-family: 'Poiret One', cursive; 
-    background: rgb(195, 224, 196);
+    font-family: 'Poiret One', cursive;
     font-weight: bolder;
+    background-color:  rgb(151, 197, 154);
+    text-decoration: black;
 
 }
+
+
 .cardPadding{
     padding: 40px;
 }
@@ -108,8 +145,14 @@ height: 100%;
 }
 
 #distt{
-    
+        opacity: 95%;
         max-width: 100%;
         height: auto;
         
 } 
+
+.foot{
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
