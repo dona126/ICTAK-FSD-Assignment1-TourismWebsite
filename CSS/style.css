@@ -21,6 +21,15 @@
     background-size: cover;
   
 }
+.parallaxn{
+    background-image: url(../Pictures/zn.jpg );
+    min-height: 200px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
 
 .explorekerala{
     text-align: center;
@@ -153,6 +162,6 @@
 
 .foot{
     background-color: white;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
+

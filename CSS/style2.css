@@ -1,0 +1,19 @@
+.containerr
+ {
+    position: relative;
+  }
+  
+
+.containerr .contentt
+ {
+    position: absolute;
+    bottom: 30px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 10px;
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+  }
+  
